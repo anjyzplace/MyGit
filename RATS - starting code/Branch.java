@@ -17,6 +17,7 @@ public class Branch implements Manager
     HashMap<String, Staff> staffs; 
     HashMap<String, Customer> customers;
     HashMap<String, Job> jobs;
+    
     // constructor
     public Branch(String location){
     staffs = new HashMap<String, Staff>();
@@ -38,6 +39,7 @@ public class Branch implements Manager
     public String getAllCustomers(){
         return "Yes";
     }
+    
     public void addStaff(String id,String name){
         Staff st = new Clerk(id, name);
         staffs.put(id, st);
@@ -51,7 +53,7 @@ public class Branch implements Manager
     }
     
     public void addStaff(String id,String name, boolean hOnly,boolean sHand,String lang, double rate){
-        Staff st = new Translator(id, name, true, true, lang, rate);
+        Staff st = new Translator(id, name, hOnly, sHand, lang, rate);
         staffs.put(id, st);
         
     }
@@ -65,9 +67,31 @@ public class Branch implements Manager
      public String getAllStaff(){
          
          return "Yes";
-        }
+     }
+     
+     /*
+      * * Add Customer
+      * **
+      * ***
+      */
+     
+    public void addCustomer( String custID,String name){
+        Customer cs = new Customer(custID, name);
+        customers.put(custID, cs);
         
-    public String addJob(String cust,boolean onSite, boolean sHand, String lang){
+    } 
+    
+    public void addCustomer(String custID, String name, int creditLimit ){
+        Customer cs = new RegCustomer(custID, name, creditLimit);
+        customers.put(custID, cs);
+        
+    } 
+    
+    public String addJob( String cust,boolean onSite, boolean sHand, String lang){
+        Job jb = new Job( cust, onSite, sHand, lang);
+       // Look for Customer
+       //if()
+        jobs.put( cust, jb);
      return "Yes";                                    
     }
     public String getAllJobs(){

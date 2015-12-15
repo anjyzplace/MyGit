@@ -9,21 +9,24 @@ public class Customer
 {
     // instance variables - replace the example below with your own
     private String name;
-
+    Boolean regular;
+    private String custID;
+    private int creditLimit = 100;
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String name)
+    public Customer(String custID, String name)
     {
         // initialise instance variables
+       this.custID=custID;
        this.name = name;
+       this.creditLimit = creditLimit;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
+//     public Customer(String custID, String name){
+//     this.custID =custID;
+//     this.name= name;
+//     creditLimit = 500;
+//     }
     
 }
