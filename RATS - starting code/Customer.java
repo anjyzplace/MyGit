@@ -10,17 +10,28 @@ public class Customer
     // instance variables - replace the example below with your own
     private String name;
     Boolean regular;
-    private String custID;
+    private int custID;
     private int creditLimit = 100;
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String custID, String name)
+    public Customer(int custID, String name)
     {
         // initialise instance variables
        this.custID=custID;
        this.name = name;
        this.creditLimit = creditLimit;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public int getID(){
+        return custID;
+    }
+    public int getLimit(){
+        return creditLimit;
     }
 
 //     public Customer(String custID, String name){

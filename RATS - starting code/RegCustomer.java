@@ -13,7 +13,7 @@ public class RegCustomer extends Customer
     /**
      * Constructor for objects of class RegCustomer
      */
-    public RegCustomer(String custID, String name, int creditLimit)
+    public RegCustomer(int custID, String name, int creditLimit)
     {
         // initialise instance variables
     super(custID, name);

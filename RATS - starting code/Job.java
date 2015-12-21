@@ -9,6 +9,7 @@ public class Job
 {
     // instance variables - replace the example below with your own
     public int jobID=100;
+    public String id; //  ID of staff who picks up the job
     Boolean home;
     public String state = "waiting";
     boolean onSite;
@@ -26,6 +27,7 @@ public class Job
        this.onSite=onSite;
        this.sHand=sHand;
        this.lang=lang;
+       this.jobID=jobID;
     }
     
 
@@ -55,5 +57,27 @@ public class Job
         
         state = "done";
         System.out.println("This job is Completed");
+    }
+    
+     public int getID(){
+        
+        System.out.println("This job ID is "+jobID );
+        return jobID;
+        
+    }
+    
+     public String getStatus(){
+        
+        System.out.println("This Status of this Job is "+state );
+        return state;
+        
+    }
+    
+      public void assignJobToStaff( String id){
+        //this.jobID=jobID;
+        this.id=id;
+        state="assigned";
+        
+        System.out.println("This job is Assigned");
     }
 }
