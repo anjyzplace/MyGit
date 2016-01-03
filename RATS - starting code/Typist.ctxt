@@ -2,4 +2,7 @@
 comment0.params=id\ name\ hOnly\ sHand
 comment0.target=Typist(java.lang.String,\ java.lang.String,\ boolean,\ boolean)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ StaffTypist\r\n
-numComments=1
+comment1.params=
+comment1.target=double\ getRate()
+comment1.text=\r\n\ Gets\ the\ per\ hour\ rate\ of\ the\ Staff\ as\ double\r\n
+numComments=2

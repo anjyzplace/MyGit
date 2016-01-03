@@ -1,11 +1,10 @@
 
 /**
  * This interface specifies behaviour expected from the RATS
- * system required for 2COM0057 Deferred/Referred Coursework 
- * 2007/8
+ * system 
  * 
- * @author A.A.Marczyk 
- * @version 07/03/08
+ * @author 14114580 
+ * @version 1.00
  */
 public interface Manager
 {

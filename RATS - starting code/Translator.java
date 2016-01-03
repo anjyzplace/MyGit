@@ -24,6 +24,14 @@ public class Translator extends Staff
         this.lang=lang;
         this.rate =rate;
     }
+     /**
+     * Gets the per hour rate of the Staff as double
+     */
+    
+     public double getRate(){
+        
+        return rate;
+    }
 
     
 }

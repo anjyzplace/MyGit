@@ -2,4 +2,7 @@
 comment0.params=id\ name
 comment0.target=Clerk(java.lang.String,\ java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Clerk\r\n
-numComments=1
+comment1.params=
+comment1.target=double\ getRate()
+comment1.text=\r\n\ Gets\ the\ per\ hour\ rate\ of\ the\ Staff\ as\ double\r\n
+numComments=2

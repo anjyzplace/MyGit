@@ -8,7 +8,7 @@
 public class Clerk extends Staff
 {
     // instance variables - replace the example below with your own
-    
+    double rate = 8;
 
     /**
      * Constructor for objects of class Clerk
@@ -17,6 +17,14 @@ public class Clerk extends Staff
     {
         // initialise instance variables
         super(id, name);
+    }
+     /**
+     * Gets the per hour rate of the Staff as double
+     */
+    
+     public double getRate(){
+        
+        return rate;
     }
 
     
