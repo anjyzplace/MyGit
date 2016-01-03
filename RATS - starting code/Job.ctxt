@@ -29,6 +29,7 @@ comment3.params=
 comment3.target=void\ setAsOngoing()
 comment3.text=\r\n\ Update\ Job\ Status\ to\ Ongoing\r\n
 comment4.params=
+<<<<<<< HEAD
 comment4.target=void\ setAsWaiting()
 comment4.text=\r\n\ Update\ Job\ Status\ to\ Waiting\r\n
 comment5.params=
@@ -47,3 +48,11 @@ comment9.params=
 comment9.target=java.lang.String\ getState()
 comment9.text=\r\n\ Get\ Job\ language\r\n
 numComments=16
+=======
+comment4.target=int\ getID()
+comment5.params=
+comment5.target=java.lang.String\ getStatus()
+comment6.params=id
+comment6.target=void\ assignJobToStaff(java.lang.String)
+numComments=7
+>>>>>>> origin/master

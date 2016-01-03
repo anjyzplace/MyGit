@@ -8,8 +8,12 @@ comment2.params=
 comment2.target=int\ getID()
 comment3.params=
 comment3.target=int\ getLimit()
+<<<<<<< HEAD
 comment4.params=
 comment4.target=boolean\ isRegular()
 comment5.params=
 comment5.target=void\ set500Limit()
 numComments=6
+=======
+numComments=4
+>>>>>>> origin/master

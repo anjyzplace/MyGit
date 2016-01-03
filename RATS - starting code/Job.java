@@ -8,8 +8,14 @@
 public class Job
 {
     // instance variables - replace the example below with your own
+<<<<<<< HEAD
     public int jobID=0;
     Boolean home=true;;
+=======
+    public int jobID=100;
+    public String id; //  ID of staff who picks up the job
+    Boolean home;
+>>>>>>> origin/master
     public String state = "waiting";
     boolean onSite;
     boolean sHand;
@@ -31,6 +37,7 @@ public class Job
        this.onSite=onSite;
        this.sHand=sHand;
        this.lang=lang;
+<<<<<<< HEAD
 
        if(sHand==true){
            this.charge = 20;
@@ -52,6 +59,9 @@ public class Job
        
     }
        
+=======
+       this.jobID=jobID;
+>>>>>>> origin/master
     }
     
 
@@ -103,6 +113,7 @@ public class Job
         
     }
     
+<<<<<<< HEAD
     
     /**
      * Get JOb ID
@@ -176,4 +187,27 @@ public class Job
         return cost;
     }
     
+=======
+     public int getID(){
+        
+        System.out.println("This job ID is "+jobID );
+        return jobID;
+        
+    }
+    
+     public String getStatus(){
+        
+        System.out.println("This Status of this Job is "+state );
+        return state;
+        
+    }
+    
+      public void assignJobToStaff( String id){
+        //this.jobID=jobID;
+        this.id=id;
+        state="assigned";
+        
+        System.out.println("This job is Assigned");
+    }
+>>>>>>> origin/master
 }

@@ -16,6 +16,7 @@ public class Branch implements Manager
     public String location;
     HashMap<String, Staff> staffs; 
     HashMap<Integer, Customer> customers;
+<<<<<<< HEAD
     HashMap<Integer, Job> jobs;
     public static int custID=1;
     public  static  int valjobID=100;
@@ -34,6 +35,21 @@ public class Branch implements Manager
     /**Returns the location of the branch as a String
      * @return the location of the branch as a String
      **/
+=======
+    HashMap<String, Job> jobs;
+    public int custID=1;
+    public int jobID=100;
+    
+    // constructor
+    public Branch(String location){
+    staffs = new HashMap<String, Staff>();
+    customers = new HashMap<Integer, Customer>();
+    jobs = new HashMap<String, Job>();
+    this.location = location;
+    
+    }
+    
+>>>>>>> origin/master
     public String getBranch(){
 
         return location;
@@ -67,6 +83,7 @@ public class Branch implements Manager
      **/
 
     public String getAllCustomers(){
+<<<<<<< HEAD
         StringBuilder builder = new StringBuilder();
         // Iterating Using entrySet() and Java iterator  
 
@@ -85,6 +102,20 @@ public class Branch implements Manager
 
         }
         return builder.toString();
+=======
+        
+        // Iterating Using entrySet() and Java iterator  
+	      
+	      Iterator<Entry<Integer, Customer>> it = customers.entrySet().iterator(); 
+	      while(it.hasNext())
+	      {
+	    	  Entry<Integer, Customer> entry = it.next();
+	    	  System.out.println("Customer: " + entry.getValue().getName().toString() + " is  ID is: " + entry.getValue().getID() );
+	    	  
+	      }
+	      String info = "Complete";
+	      return info;
+>>>>>>> origin/master
     }
 
     /** Allows a clerk to be added to the branch.The clerk's availability
@@ -181,6 +212,7 @@ public class Branch implements Manager
 
         staffs.remove(depId);
     }
+<<<<<<< HEAD
 
     /** Returns a String representation of all the staffs  
      * @return returns a String representation of all staffs 
@@ -207,12 +239,22 @@ public class Branch implements Manager
      * ***
      */
 
+=======
+    
+     public String getAllStaff(){
+         
+         return "Yes";
+     }
+
+     
+>>>>>>> origin/master
     public void addCustomer( int custID,String name){
         Customer cs = new Customer(custID, name);
         customers.put(custID, cs);
         custID++;
 
     } 
+<<<<<<< HEAD
 
     /**
      * * Add Customer with credit Limit constructor
@@ -222,6 +264,10 @@ public class Branch implements Manager
 
     public void addCustomer(int custID, String name, int creditLimit ){
 
+=======
+    
+    public void addCustomer(int custID, String name, int creditLimit ){
+>>>>>>> origin/master
         Customer cs = new RegCustomer(custID, name, creditLimit);
         customers.put(custID, cs);
         custID++;
@@ -311,6 +357,7 @@ public class Branch implements Manager
            }
 
     
+<<<<<<< HEAD
     /**
      *  Display all jobs
      */
@@ -329,6 +376,50 @@ public class Branch implements Manager
         }
 
         return builder.toString();
+=======
+    public Boolean isWithinCreditLimit(String custID){
+        
+        return true;
+        
+    }
+    
+     public String addJob( String cust, boolean onSite, boolean sHand, String lang){
+         
+          System.out.println("ID for job before addition is " +jobID);
+         // If cusomter does not already exist, the customer is added to the database.
+         Customer cs = new Customer(custID, cust);
+         customers.put(custID, cs);
+         
+         //If custoemr is not over credit Limt, the job is added to a collection of jobs.
+        //         Iterator<Entry<String, Customer>> it = customers.entrySet().iterator(); 
+        //         if()
+         
+         System.out.println("New Customer Created, ID is "+custID+" and Customer Name is "+ cust);
+         custID++;
+         
+         System.out.println("The Next avaialble Customer ID is "+custID);
+        Job jb = new Job( cust, onSite, sHand, lang);
+      
+        
+       // Look for Customer
+       //if()
+        jobs.put( cust, jb);
+        jobID++;
+        System.out.println("New Job added for Customer "+cust+" with ID " +jobID);
+     return "Yes";                                    
+    }
+    public String getAllJobs(){
+        // Iterating Using entrySet() and Java iterator  
+	      
+	      Iterator<Entry<String, Job>> it = jobs.entrySet().iterator(); 
+	      while(it.hasNext())
+	      {
+	    	  Entry<String, Job> entry = it.next();
+	    	  System.out.println("Job ID: " + entry.getValue().getID()+ " is " + entry.getValue().getStatus()  );
+	    	  
+	      }
+        return "Yes";
+>>>>>>> origin/master
     }
 
     public String getJobsWaiting(){
@@ -601,6 +692,35 @@ public class Branch implements Manager
     }
 
     
+<<<<<<< HEAD
 
+=======
+     public void showLimitAllCustomers(){
+        
+        // Iterating Using entrySet() and Java iterator  
+	      
+	      Iterator<Entry<Integer, Customer>> it = customers.entrySet().iterator(); 
+	      while(it.hasNext())
+	      {
+	    	  Entry<Integer, Customer> entry = it.next();
+	    	  System.out.println("Customer " + entry.getValue().getName().toString() + " has a Credit Limit of " + entry.getValue().getLimit() + ", ID is: " + entry.getValue().getID() );
+	    	  
+	      }
+        
+    }
+    /*
+     * Assign job to Staff
+     */
+    public void assignJobToStaff(int jobID, String staffId)
+    {
+        Job job = jobs.get(jobID);
+        job.assignJobToStaff (staffId);
+    }
+    
+    
+    
+    
+    
+>>>>>>> origin/master
     
 }

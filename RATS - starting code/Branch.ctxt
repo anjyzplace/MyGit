@@ -9,6 +9,7 @@ comment10.target=java.lang.String\ getAllStaff()
 comment10.text=\ Returns\ a\ String\ representation\ of\ all\ the\ staffs\ \ \r\n\ @return\ returns\ a\ String\ representation\ of\ all\ staffs\ \r\n
 comment11.params=custID\ name
 comment11.target=void\ addCustomer(int,\ java.lang.String)
+<<<<<<< HEAD
 comment11.text=\r\n\ *\ Add\ Customer\ with\ Constructor\ 1\r\n\ **\r\n\ ***\r\n
 comment12.params=custID\ name\ creditLimit
 comment12.target=void\ addCustomer(int,\ java.lang.String,\ int)
@@ -48,6 +49,34 @@ comment22.text=\r\n\ Method\ to\ Check\ it\ customer\ is\ within\ Limit\r\n\ \r\
 comment23.params=
 comment23.target=java.lang.String\ nextAvaialbleStaff()
 comment23.text=\r\n\ Get\ next\ avaialble\ staff\r\n
+=======
+comment12.params=custID\ name\ creditLimit
+comment12.target=void\ addCustomer(int,\ java.lang.String,\ int)
+comment13.params=custID
+comment13.target=java.lang.Boolean\ isWithinCreditLimit(java.lang.String)
+comment14.params=cust\ onSite\ sHand\ lang
+comment14.target=java.lang.String\ addJob(java.lang.String,\ boolean,\ boolean,\ java.lang.String)
+comment15.params=
+comment15.target=java.lang.String\ getAllJobs()
+comment16.params=
+comment16.target=java.lang.String\ getJobsWaiting()
+comment17.params=jNo
+comment17.target=double\ getJobCost(int)
+comment18.params=jNo\ hours
+comment18.target=int\ setJobDone(int,\ int)
+comment19.params=
+comment19.target=int\ checkJobsWaiting()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment20.params=
+comment20.target=void\ showAllStaff()
+comment20.text=\r\n\ Iterate\ through\ the\ HashMap\ of\ Staff\r\n\ \r\n\ \r\n
+comment21.params=
+comment21.target=void\ showLimitAllCustomers()
+comment22.params=jobID\ staffId
+comment22.target=void\ assignJobToStaff(int,\ java.lang.String)
+comment22.text=\r\n\ Assign\ job\ to\ Staff\r\n
+>>>>>>> origin/master
 comment3.params=
 comment3.target=java.lang.String\ getAllCustomers()
 comment3.text=Returns\ a\ String\ representation\ of\ customers\ who\ have\ used\ the\ \r\n\ branch's\ services\r\n\ @return\ a\ String\ representation\ of\ the\ customers\ who\ have\ used\ \r\n\ the\ branch's\ services\ \r\n
@@ -68,5 +97,9 @@ comment8.target=boolean\ isStaff(java.lang.String)
 comment8.text=\ Returns\ true\ if\ the\ staff\ with\ the\ staff\ identifier\ \r\n\ can\ be\ found\ in\ the\ system,\ false\ otherwise.\r\n\ @param\ stfId\ represents\ the\ staff\ identifier\ \r\n\ @return\ returns\ true\ if\ the\ staff\ with\ the\ staff\ identifier\ \r\n\ can\ be\ found,\ false\ otherwise.\r\n
 comment9.params=depId
 comment9.target=void\ removeStaff(java.lang.String)
+<<<<<<< HEAD
 comment9.text=\ Removes\ a\ staff\ from\ the\ branch.\r\n\ pre-condition\:\ isStaff(depId)\r\n\ @param\ stfId\ represents\ the\ staff\ identifier\ \r\n
 numComments=24
+=======
+numComments=23
+>>>>>>> origin/master
